@@ -1,3 +1,4 @@
+
 :root {
   --background: #faf8f3;
   --pink: #f789db;
@@ -38,12 +39,16 @@ header {
   display: flex;
   align-items: center;
   gap: 13px;
-  color: var(--blue);
-  font-size: 1.8rem;
 }
 
 .logo {
   max-width: 13%;
+}
+
+.title-logo {
+  color: var(--blue);
+  font-size:3rem;
+  letter-spacing: 2px;
 }
 
 #add-book {
@@ -77,4 +82,37 @@ header {
   color: var(--dark-blue);
   font-size: 2.5rem;
   top: 22%
+}
+
+dialog {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+dialog .modal-title {
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  outline: none;
+  border-bottom:1px solid var(--pink);
+  font-size: 1.6rem;
+  padding: 10px;
+  margin: 5px;
+}
+
+form label {
+  font-size: 1.6rem;
+  margin-block: 10px;
 }
