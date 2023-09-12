@@ -22,4 +22,7 @@ closeModal.onclick = function () {
   modal.close();
 }
 
+//empty array that will receive the objects
+let myLibrary = [];
+
 
