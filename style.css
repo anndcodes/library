@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --background: #faf8f3;
   --pink: #f789db;
-  --blue: #6DBBFD;
+  --blue: #6dbbfd;
   --dark-blue: #269aff;
-
 }
 
 * {
@@ -22,6 +22,7 @@ html {
 
 body {
   background: var(--background);
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -47,7 +48,8 @@ header {
 
 .title-logo {
   color: var(--blue);
-  font-size:3rem;
+  font-family: 'Fugaz One', cursive;
+  font-size: 3rem;
   letter-spacing: 2px;
 }
 
@@ -70,7 +72,7 @@ header {
   position: absolute;
   right: 0;
   margin-right: 68px;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 #add-book:hover span {
@@ -78,10 +80,10 @@ header {
   margin: 0;
   padding: 0;
   border: none;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   color: var(--dark-blue);
   font-size: 2.5rem;
-  top: 22%
+  top: 22%;
 }
 
 dialog {
@@ -106,7 +108,7 @@ form {
 
 form input {
   outline: none;
-  border-bottom:1px solid var(--pink);
+  border-bottom: 1px solid var(--pink);
   font-size: 1.6rem;
   padding: 10px;
   margin: 5px;
