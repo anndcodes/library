@@ -99,7 +99,7 @@ dialog .modal-title {
 }
 
 form {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,4 +117,10 @@ form input {
 form label {
   font-size: 1.6rem;
   margin-block: 10px;
+}
+
+.modal-btns button {
+  background: transparent;
+  cursor: pointer;
+  padding-inline: 30px;
 }
