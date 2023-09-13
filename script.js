@@ -49,12 +49,31 @@ function addBookToLibrary() {
     for(let i = 0; i < books.length; i++) {
       index = books[i];
     }
-    
+
+    displayBook();
     modal.close();
     bookInfo.reset();
   })
 }
 
+// display books cards
+function displayBook() {
+  // create elements
+  let container = document.querySelector(".container");
+  let card = document.createElement("div");
+  let cardTitle = document.createElement("h3");
+  let cardAuthor = document.createElement("p");
+  let cardPages = document.createElement("p");
+
+  //add content
+  cardTitle.textContent = `${title}`;
+  cardAuthor.textContent = `${author}`;
+  cardPages.textContent = `${pages} pages`;
+
+  //append elements
+  container.appendChild(card);
+  card.append(cardTitle, cardAuthor, cardPages);
+}
 
 
 addBookToLibrary()
