@@ -59,11 +59,17 @@ function addBookToLibrary() {
 // display books cards
 function displayBook() {
   // create elements
-  let container = document.querySelector(".container");
+  let cardsContainer = document.querySelector(".cards-container")
   let card = document.createElement("div");
   let cardTitle = document.createElement("h3");
   let cardAuthor = document.createElement("p");
   let cardPages = document.createElement("p");
+
+  //add class
+  card.classList.add("card");
+  cardTitle.classList.add("card-title");
+  cardAuthor.classList.add("card-author");
+  cardPages.classList.add("card-pages");
 
   //add content
   cardTitle.textContent = `${title}`;
@@ -71,7 +77,7 @@ function displayBook() {
   cardPages.textContent = `${pages} pages`;
 
   //append elements
-  container.appendChild(card);
+  cardsContainer.appendChild(card);
   card.append(cardTitle, cardAuthor, cardPages);
 }
 
