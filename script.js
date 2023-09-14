@@ -65,9 +65,10 @@ function displayBook() {
   let cardAuthor = document.createElement("p");
   let cardPages = document.createElement("p");
   let removeCard = document.createElement("button");
+  let readStatus = document.createElement("button");
 
   //append elements
-  card.append(cardTitle, cardAuthor, cardPages, removeCard);
+  card.append(cardTitle, cardAuthor, cardPages, readStatus, removeCard);
 
   //add class
   card.classList.add("card");
@@ -75,12 +76,24 @@ function displayBook() {
   cardAuthor.classList.add("card-author");
   cardPages.classList.add("card-pages");
   removeCard.classList.add("remove-card");
+  readStatus.classList.add("read-status");
 
   //add content
   cardTitle.textContent = `${title}`;
   cardAuthor.textContent = `${author}`;
   cardPages.textContent = `${pages} pages`;
   removeCard.innerHTML = '<img src="assets/remove.svg" />';
+
+  //add read status button
+  read.forEach(status => {
+    if(status.checked) {
+      readStatus.textContent = "read";
+      readStatus.classList.add("have-read");
+    } else {
+      readStatus.textContent = "not read";
+      readStatus.classList.add("not-read");
+    }
+  })
 
   // remove card
   removeCard.addEventListener('click', function () {
