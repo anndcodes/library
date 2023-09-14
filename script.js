@@ -95,6 +95,17 @@ function displayBook() {
     }
   })
 
+  // update read status
+  readStatus.addEventListener('click', () => {
+    if(readStatus.classList.contains("have-read")) {
+      readStatus.textContent = "not read";
+      readStatus.setAttribute("class", "not-read");
+    } else {
+      readStatus.textContent = "read";
+      readStatus.setAttribute("class", "have-read");
+    }
+  })
+
   // remove card
   removeCard.addEventListener('click', function () {
     myLibrary.splice(index, 1);
