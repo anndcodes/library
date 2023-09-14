@@ -163,4 +163,8 @@ form label {
   font-size: 1.5rem;
 }
 
-
+.remove-card {
+  background: transparent;
+  align-self: flex-end;
+  cursor: pointer
+}

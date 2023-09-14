@@ -42,11 +42,11 @@ function addBookToLibrary() {
     pages = document.getElementById("pages").value;
     read = Array.from(document.querySelectorAll(".read"));
 
-    myLibrary.push(new Book(title, author, pages,read));
+    myLibrary.push(new Book(title, author, pages, read));
 
     // get index of the books
     books = Object.keys(myLibrary);
-    for(let i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
       index = books[i];
     }
 
@@ -59,26 +59,34 @@ function addBookToLibrary() {
 // display books cards
 function displayBook() {
   // create elements
-  let cardsContainer = document.querySelector(".cards-container")
   let card = document.createElement("div");
+  let cardsContainer = document.querySelector(".cards-container").appendChild(card);
   let cardTitle = document.createElement("h3");
   let cardAuthor = document.createElement("p");
   let cardPages = document.createElement("p");
+  let removeCard = document.createElement("button");
+
+  //append elements
+  card.append(cardTitle, cardAuthor, cardPages, removeCard);
 
   //add class
   card.classList.add("card");
   cardTitle.classList.add("card-title");
   cardAuthor.classList.add("card-author");
   cardPages.classList.add("card-pages");
+  removeCard.classList.add("remove-card");
 
   //add content
   cardTitle.textContent = `${title}`;
   cardAuthor.textContent = `${author}`;
   cardPages.textContent = `${pages} pages`;
+  removeCard.innerHTML = '<img src="assets/remove.svg" />';
 
-  //append elements
-  cardsContainer.appendChild(card);
-  card.append(cardTitle, cardAuthor, cardPages);
+  // remove card
+  removeCard.addEventListener('click', function () {
+    myLibrary.splice(index, 1);
+    cardsContainer.remove(card);
+  })
 }
 
 
