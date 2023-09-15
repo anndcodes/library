@@ -24,11 +24,18 @@ html {
 body {
   background: var(--background);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--txt)
+  color: var(--txt);
 }
 
 button {
   cursor: pointer;
+  font-family: inherit;
+  color: var(--light-beige);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  box-shadow: none;
 }
 
 header {
@@ -60,9 +67,8 @@ header {
 
 #add-book {
   background: var(--beige);
-  color: var(--light-beige);
   border-radius: 25px;
-  padding: 15px 33px;
+  padding: 10px 35px;
   font-size: 1.7rem;
   font-weight: 600;
   position: relative;
@@ -75,23 +81,20 @@ header {
 #add-book span {
   position: absolute;
   right: 0;
-  margin-right: 68px;
+  margin-right: 73px;
   transition-duration: 0.3s;
 }
 
 #add-book:hover span {
   right: 40%;
+  top: 0;
   margin: 0;
-  padding: 0;
-  border: none;
   transition-duration: 0.3s;
   color: var(--light-beige);
   font-size: 2.5rem;
-  top: 22%;
 }
 
 /* modal */
-
 dialog {
   background: var(--light-beige);
   text-align: center;
@@ -128,11 +131,24 @@ form label {
   margin-block: 10px;
 }
 
-.modal-btns button {
-  background: transparent;
-  padding-inline: 30px;
+#submit-book,
+#close-modal {
+  margin: 10px;
+  padding: 10px 30px;
+  border-radius: 13px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
+#submit-book,
+.have-read {
+  background: var(--green);
+}
+
+#close-modal,
+.not-read {
+  background: var(--light-orange);
+}
 
 /* cards */
 .cards-container {
@@ -176,26 +192,19 @@ form label {
 .read-status,
 .remove-card {
   width: 80%;
-  font-family: inherit;
   font-size: 1.6rem;
   font-weight: 500;
   padding: 8px;
   border-radius: 10px;
   transition: all 200ms ease-in-out;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .read-status {
   margin: 10px;
-  color: var(--light-beige);
 }
 
 .read-status:hover {
   opacity: 0.8;
-}
-
-.read-status:active {
-  box-shadow: none;
 }
 
 .remove-card {
@@ -210,10 +219,3 @@ form label {
   color: var(--light-beige)
 }
 
-.not-read {
-  background: var(--light-orange);
-}
-
-.have-read {
-  background: var(--green);
-}
