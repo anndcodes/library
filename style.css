@@ -1,8 +1,10 @@
 :root {
-  --background: #faf8f3;
-  --pink: #f789db;
-  --blue: #6dbbfd;
-  --dark-blue: #269aff;
+  --orange: #DB5B3E;
+  --beige: #DD9F6C;
+  --light-beige: #fff2e7;
+  --background: #F2E7D2;
+  --txt: #605B58;
+  --green: #5AAB8C;
 }
 
 * {
@@ -21,7 +23,7 @@ html {
 body {
   background: var(--background);
   font-family: 'Plus Jakarta Sans', sans-serif;
-
+  color: var(--txt)
 }
 
 header {
@@ -42,18 +44,18 @@ header {
 }
 
 .logo {
-  max-width: 13%;
+  max-width: 11%;
 }
 
 .title-logo {
-  color: var(--blue);
+  color: var(--orange);
   font-family: 'Zodiak', serif;
   font-size: 3rem;
 }
 
 #add-book {
-  background: var(--pink);
-  color: var(--dark-blue);
+  background: var(--beige);
+  color: var(--light-beige);
   border-radius: 25px;
   padding: 15px 33px;
   font-size: 1.7rem;
@@ -79,12 +81,15 @@ header {
   padding: 0;
   border: none;
   transition-duration: 0.3s;
-  color: var(--dark-blue);
+  color: var(--light-beige);
   font-size: 2.5rem;
   top: 22%;
 }
 
+/* modal */
+
 dialog {
+  background: var(--light-beige);
   text-align: center;
   margin: auto;
   padding: 20px;
@@ -92,7 +97,7 @@ dialog {
 }
 
 dialog .modal-title {
-  color: var(--blue);
+  color: var(--orange);
   font-size: 2rem;
 }
 
@@ -106,7 +111,8 @@ form {
 
 form input {
   outline: none;
-  border-bottom: 1px solid var(--pink);
+  border-bottom: 1px solid var(--beige);
+  background: transparent;
   font-size: 1.6rem;
   padding: 10px;
   margin: 5px;
@@ -143,14 +149,14 @@ form label {
   align-items: center;
   height: 300px;
   border-radius: 18px;
-  background: #fff;
+  background: var(--light-beige);
 }
 
 .card-title {
   text-align: center;
   font-size: 2.3rem;
   font-weight: 900;
-  color: var(--pink);
+  color: var(--beige);
 }
 
 .card-author {
