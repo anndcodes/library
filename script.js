@@ -82,7 +82,7 @@ function displayBook() {
   cardTitle.textContent = `${title}`;
   cardAuthor.textContent = `${author}`;
   cardPages.textContent = `${pages} pages`;
-  removeCard.innerHTML = '<img src="assets/remove.svg" />';
+  removeCard.textContent = "remove";
 
   //add read status button
   read.forEach(status => {
@@ -99,10 +99,10 @@ function displayBook() {
   readStatus.addEventListener('click', () => {
     if(readStatus.classList.contains("have-read")) {
       readStatus.textContent = "not read";
-      readStatus.setAttribute("class", "not-read");
+      readStatus.setAttribute("class", "not-read read-status");
     } else {
       readStatus.textContent = "read";
-      readStatus.setAttribute("class", "have-read");
+      readStatus.setAttribute("class", "have-read read-status");
     }
   })
 

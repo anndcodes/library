@@ -1,5 +1,6 @@
 :root {
   --orange: #DB5B3E;
+  --light-orange: #E96C4B;
   --beige: #DD9F6C;
   --light-beige: #fff2e7;
   --background: #F2E7D2;
@@ -24,6 +25,10 @@ body {
   background: var(--background);
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--txt)
+}
+
+button {
+  cursor: pointer;
 }
 
 header {
@@ -61,7 +66,6 @@ header {
   font-size: 1.7rem;
   font-weight: 600;
   position: relative;
-  cursor: pointer;
 }
 
 #add-book:hover {
@@ -126,7 +130,6 @@ form label {
 
 .modal-btns button {
   background: transparent;
-  cursor: pointer;
   padding-inline: 30px;
 }
 
@@ -143,11 +146,10 @@ form label {
 
 .card {
   display: flex;
-  padding: 60px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 30px;
   align-items: center;
-  height: 300px;
   border-radius: 18px;
   background: var(--light-beige);
 }
@@ -161,16 +163,51 @@ form label {
 
 .card-author {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .card-pages {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+}
+
+/* read status and remove buttons */
+.read-status,
+.remove-card {
+  width: 80%;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
 }
 
 .remove-card {
+  color: inherit;
   background: transparent;
-  align-self: flex-end;
-  cursor: pointer
+  border: 1px solid var(--orange);
+}
+
+.read-status {
+  margin: 10px;
+  color: var(--light-beige);
+}
+
+.not-read {
+  background: var(--light-orange);
+}
+
+.read-status:hover {
+  opacity: 0.8;
+}
+
+.have-read {
+  background: var(--green);
+}
+
+.remove-card:hover {
+  background: var(--orange);
+  opacity: 0.7;
+  color: var(--light-beige)
 }
