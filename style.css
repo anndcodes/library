@@ -66,12 +66,16 @@ header {
 }
 
 #add-book {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   background: var(--beige);
   border-radius: 25px;
   padding: 10px 35px;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 600;
   position: relative;
+  transition-duration: .3s;
 }
 
 #add-book:hover {
@@ -87,11 +91,12 @@ header {
 
 #add-book:hover span {
   right: 40%;
-  top: 0;
+  top: 5px;
   margin: 0;
   transition-duration: 0.3s;
   color: var(--light-beige);
-  font-size: 2.5rem;
+  font-size: 2rem;
+  transition-duration: .3s;
 }
 
 /* modal */
