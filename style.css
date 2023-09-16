@@ -75,7 +75,7 @@ header {
   font-size: 1.8rem;
   font-weight: 600;
   position: relative;
-  transition-duration: .3s;
+  transition-duration: .4s;
 }
 
 #add-book:hover {
@@ -86,17 +86,16 @@ header {
   position: absolute;
   right: 0;
   margin-right: 73px;
-  transition-duration: 0.3s;
+  transition-duration: .4s;
 }
 
 #add-book:hover span {
   right: 40%;
   top: 5px;
   margin: 0;
-  transition-duration: 0.3s;
   color: var(--light-beige);
   font-size: 2rem;
-  transition-duration: .3s;
+  transition-duration: .4s;
 }
 
 /* modal */
@@ -134,6 +133,44 @@ form input {
 form label {
   font-size: 1.6rem;
   margin-block: 10px;
+}
+
+label[for="read"] {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+form input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  margin: 0;
+  font:inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.19rem solid var(--txt);
+  border-radius: 0.4em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+form input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em ;
+  color: var(--orange);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 
 #submit-book,
