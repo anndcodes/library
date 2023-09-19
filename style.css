@@ -36,6 +36,7 @@ button {
   font-family: inherit;
   color: var(--light-beige);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
 button:active {
