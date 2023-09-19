@@ -8,7 +8,10 @@
   --green: #5AAB8C;
 }
 
-* {
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,8 +20,9 @@
 }
 
 html {
+  position: relative;
   font-size: 62.5%;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -46,7 +50,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 18px;
+  padding: 18px;  
 }
 
 .header-logo {
@@ -261,3 +265,24 @@ input[type="checkbox"]:checked::before {
   color: var(--light-beige)
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+footer span {
+  font-weight: bold;
+}
+
+footer img {
+  transition: transform .2s;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}
