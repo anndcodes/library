@@ -202,6 +202,11 @@ input[type="checkbox"]:checked::before {
   background: var(--light-orange);
 }
 
+#submit-book:hover,
+#close-modal:hover {
+  opacity: 0.9;
+}
+
 /* cards */
 .cards-container {
   margin: 180px 250px 100px;
